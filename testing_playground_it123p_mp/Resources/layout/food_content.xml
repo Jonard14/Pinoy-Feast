@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/outerContainer">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/inner_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:text="Regional Specialties"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/region_label"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="30px"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout1" 
+                android:gravity="right">
+
+                <TextView
+                    android:text="Show Hidden Dishes"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/linearLayout1"
+                    android:id="@+id/textView4" />
+                <ToggleButton
+                    android:layout_width="107.5dp"
+                    android:layout_height="37.0dp"
+                    android:id="@+id/toggleButton1" />
+            </LinearLayout>
+          
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/foodContainer" 
+                android:gravity="center"/>
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+</ScrollView>
+
