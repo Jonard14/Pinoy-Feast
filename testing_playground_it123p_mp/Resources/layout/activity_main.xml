@@ -52,7 +52,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="next activity" />
-            </LinearLayout>
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="334.5dp"
+                android:id="@+id/imageView1" />
+            <TextView
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="39.0dp"
+                android:textSize="26dp"
+                android:gravity="center"
+                android:id="@+id/textView1" />
+        </LinearLayout>
         
         <!-- Add your main content layout here -->
 

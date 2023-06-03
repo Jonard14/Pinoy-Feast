@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\frien\\source\\repos\\testing_playground_it123p_mp\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj": {}
+    "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\frien\\source\\repos\\testing_playground_it123p_mp\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj": {
+    "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frien\\source\\repos\\testing_playground_it123p_mp\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj",
+        "projectUniqueName": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj",
         "projectName": "testing_playground_it123p_mp",
-        "projectPath": "C:\\Users\\frien\\source\\repos\\testing_playground_it123p_mp\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj",
-        "packagesPath": "C:\\Users\\frien\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\frien\\source\\repos\\testing_playground_it123p_mp\\testing_playground_it123p_mp\\obj\\",
+        "projectPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\testing_playground_it123p_mp\\testing_playground_it123p_mp.csproj",
+        "packagesPath": "C:\\Users\\norys\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\testing_playground_it123p_mp\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\frien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\norys\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid11.0"
