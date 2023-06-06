@@ -59,7 +59,7 @@ namespace GROUP7_IT123P_MP
 
             img_hide_bttn.SetImageResource(Resource.Drawable.eye_open);
             img_hide_bttn.SetBackgroundColor(new Android.Graphics.Color(0, 0, 0, 0));
-            img_hide_bttn.Click += UpdateHiddenStatus;
+            img_hide_bttn.Click += this.UpdateHiddenStatus;
 
             // label attributes
             RelativeLayout.LayoutParams dishLabelParams = new RelativeLayout.LayoutParams(
@@ -85,26 +85,39 @@ namespace GROUP7_IT123P_MP
         }
 
         public void UpdateHiddenStatus(object sender, EventArgs e)
-        {
+        {    
+            string res="";
+            int status;
+            //pass name and status
+            DBClass response = new DBClass();
+
             // if it is the first time the hide button is clicked, execute:
+            //0=default; 1=Hidden
             if(hidden_status == false && first_trigger == true)
             {
-                hidden_status = true;
+
+                hidden_status = true;            
                 first_trigger = false;
             }
 
             if(hidden_status == false)
             {
+                status = 1;
+                res = response.UpdateStatus("update_record.php?name=" + name + "&status=" + status);
                 img_hide_bttn.SetImageResource(Resource.Drawable.eye_open);
                 MakeDishVisible(img_bttn_container);
             }
             else if(hidden_status == true)
             {
+                status = 0;  
+                res = response.UpdateStatus("update_record.php?name=" + name + "&status=" + status);
                 img_hide_bttn.SetImageResource(Resource.Drawable.eye_closed);
                 MakeDishHidden(img_bttn_container);
             }
 
             hidden_status = !hidden_status; // if true = false, if false=true;
+            Toast.MakeText(Application.Context, String.Format(res), ToastLength.Short).Show();
+
         }
 
         public void MakeDishHidden(RelativeLayout dish_img_bttn_container)
@@ -123,6 +136,7 @@ namespace GROUP7_IT123P_MP
         {
             // for pop-up modal
             modal_builder.SetTitle(name);
+            modal_builder.SetIcon((int)typeof(Resource.Drawable).GetField(img).GetValue(null));
             modal_builder.SetMessage(desc);
 
             // optional buttons sa pop-up 

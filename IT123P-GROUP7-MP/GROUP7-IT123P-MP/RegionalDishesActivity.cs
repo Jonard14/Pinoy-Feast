@@ -139,7 +139,7 @@ namespace GROUP7_IT123P_MP
                 RelativeLayout.LayoutParams container_params = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.MatchParent,
                     RelativeLayout.LayoutParams.MatchParent);
-                container_params.TopMargin = 50 * (i + 1); // Adjusts the top margin 
+                container_params.TopMargin = 50;// * (i + 1); // Adjusts the top margin 
 
 
                 dish_img_bttn_container.LayoutParameters = container_params;
