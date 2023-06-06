@@ -18,17 +18,18 @@ namespace GROUP7_IT123P_MP
     {
         ImageView iv;
         TextView title_tv, desc_tv;
-        string[] dish_descs, dish_imgs;
+        string[] dish_titles, dish_descs, dish_imgs;
 
         int speed;
         Timer timer;
         Random rand;
 
-        public Randomizer(ImageView iv, TextView dish_title_tv, TextView dish_desc_tv, string[] dish_descs, string[] dish_imgs)
+        public Randomizer(ImageView iv, TextView dish_title_tv, TextView dish_desc_tv, string[] dish_titles, string[] dish_descs, string[] dish_imgs)
         {
             this.iv = iv;
             this.title_tv = dish_title_tv;
             this.desc_tv = dish_desc_tv;
+            this.dish_titles = dish_titles;
             this.dish_descs = dish_descs;
             this.dish_imgs = dish_imgs;
         }
@@ -47,9 +48,9 @@ namespace GROUP7_IT123P_MP
             timer.Start();
         }
 
-        private void displayInfo(object sender, System.Timers.ElapsedEventArgs e)
+        private void displayInfo(object sender, ElapsedEventArgs e)
         {
-            rand = new System.Random();
+            rand = new Random();
             int cnt = rand.Next(dish_imgs.Length);
 
             int resourceId = (int)typeof(Resource.Drawable).GetField(dish_imgs[cnt]).GetValue(null);
@@ -57,10 +58,25 @@ namespace GROUP7_IT123P_MP
             iv.LayoutParameters.Height = 1200;
             iv.LayoutParameters.Width = 1200;
 
-            title_tv.Text = dish_imgs[cnt];
+            title_tv.Text = dish_titles[cnt];
             desc_tv.Text = dish_descs[cnt];
 
             throw new NotImplementedException();
+        }
+
+        //When the app opened
+        public void startup()
+        {
+            rand = new Random();
+            int cnt = rand.Next(dish_imgs.Length);
+
+            int resourceId = (int)typeof(Resource.Drawable).GetField(dish_imgs[cnt]).GetValue(null);
+            iv.SetImageResource(resourceId);
+            iv.LayoutParameters.Height = 1200;
+            iv.LayoutParameters.Width = 1200;
+
+            title_tv.Text = dish_titles[cnt];
+            desc_tv.Text = dish_descs[cnt];
         }
     }
 }

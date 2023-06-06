@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP-main\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
+    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP-main\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP-main\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
         "projectName": "GROUP7-IT123P-MP",
-        "projectPath": "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
-        "packagesPath": "C:\\Users\\frien\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP-main\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP-main\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\frien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -40,6 +40,10 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "Xamarin.AndroidX.AppCompat": {
               "target": "Package",
               "version": "[1.2.0.5, )"

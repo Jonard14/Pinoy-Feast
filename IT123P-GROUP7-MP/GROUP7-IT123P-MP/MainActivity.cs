@@ -13,7 +13,10 @@ using Google.Android.Material.Snackbar;
 using Android.Widget;
 using Android.Content;
 using System.Timers;
-
+using System.Net;
+using System.IO;
+using System.Collections.Generic;
+using System.Text.Json;
 
 namespace GROUP7_IT123P_MP
 {
@@ -27,9 +30,10 @@ namespace GROUP7_IT123P_MP
         System.Random rand;
         string food_category;
         
+        /*
         string[] dish_descs = { "Toyo + Suka slay", "asim", "best served w/ puto tbh" };
         string[] dish_imgs = { "ADOBO", "SINIGANG", "DINUGUAN" };//ganito muna for testing pero db talaga kukunin
-
+        */
         Randomizer randclass; //Random Class
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -56,14 +60,10 @@ namespace GROUP7_IT123P_MP
             iv.LayoutParameters.Width = 600;
 
             dish_title_tv = FindViewById<TextView>(Resource.Id.title_tv);
-            dish_title_tv.Text = dish_imgs[0];
-
             dish_desc_tv = FindViewById<TextView>(Resource.Id.desc_tv);
-            dish_desc_tv.Text = dish_descs[0];
 
             //Calls Randomizer.cs Class
-            randclass = new Randomizer(iv, dish_title_tv, dish_desc_tv, dish_descs, dish_imgs);
-            randclass.Play();
+            displayfood(iv, dish_title_tv, dish_desc_tv);
         }
 
         // Triggers goToNextPage function upon selection of nav item
@@ -75,6 +75,45 @@ namespace GROUP7_IT123P_MP
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
+        }
+
+        //Displays Content
+        public void displayfood(ImageView iv, TextView dish_title_tv, TextView dish_desc_tv) //retrieve data from the database
+        {
+            DBClass response = new DBClass();
+            HttpWebResponse res = response.RetrieveData("search_record.php");
+            StreamReader reader = new StreamReader(res.GetResponseStream());
+            var result = reader.ReadToEnd();
+            using JsonDocument doc = JsonDocument.Parse(result);
+            JsonElement root = doc.RootElement;
+
+            List<string> title = new List<string>();
+            List<string> imageFiles = new List<string>(); //empty lists for desc and imgfile
+            List<string> desc = new List<string>();
+
+            for (int i = 0; i < root.GetArrayLength(); i++) //loops through the database and assign it in a variable
+            {
+                var u1 = root[i];
+
+                string searchedname = u1.GetProperty("name").ToString();
+                string searchedimgfile = u1.GetProperty("imgfile").ToString();
+                string searcheddesc = u1.GetProperty("description").ToString();
+                string searchedstatus = u1.GetProperty("status").ToString();
+
+                title.Add(searchedname);
+                imageFiles.Add(searchedimgfile); //added imgfile and desc in the lists
+                desc.Add(searcheddesc);
+            }
+            string[] titleArray = title.ToArray();
+            string[] imgArray = imageFiles.ToArray(); //converted the lists to an array and then assign it in the parameters for randclass
+            string[] descArray = desc.ToArray();
+
+            //Calls Randomizer class
+            randclass = new Randomizer(iv, dish_title_tv, dish_desc_tv, titleArray, descArray, imgArray);
+            //Randomize content when the user opens the app
+            randclass.startup();
+            //Runs the content randomly every 10 seconds
+            randclass.Play();
         }
 
         // Passes the food category into the Food Activity 
