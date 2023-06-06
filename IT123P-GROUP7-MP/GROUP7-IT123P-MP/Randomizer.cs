@@ -17,17 +17,18 @@ namespace GROUP7_IT123P_MP
     internal class Randomizer
     {
         ImageView iv;
-        TextView tv;
+        TextView title_tv, desc_tv;
         string[] dish_descs, dish_imgs;
 
         int speed;
         Timer timer;
         Random rand;
 
-        public Randomizer(ImageView iv, TextView tv, string[] dish_descs, string[] dish_imgs)
+        public Randomizer(ImageView iv, TextView dish_title_tv, TextView dish_desc_tv, string[] dish_descs, string[] dish_imgs)
         {
             this.iv = iv;
-            this.tv = tv;
+            this.title_tv = dish_title_tv;
+            this.desc_tv = dish_desc_tv;
             this.dish_descs = dish_descs;
             this.dish_imgs = dish_imgs;
         }
@@ -56,7 +57,8 @@ namespace GROUP7_IT123P_MP
             iv.LayoutParameters.Height = 1200;
             iv.LayoutParameters.Width = 1200;
 
-            tv.Text = dish_descs[cnt];
+            title_tv.Text = dish_imgs[cnt];
+            desc_tv.Text = dish_descs[cnt];
 
             throw new NotImplementedException();
         }

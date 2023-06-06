@@ -21,7 +21,7 @@ namespace GROUP7_IT123P_MP
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         ImageView iv;
-        TextView tv;
+        TextView dish_title_tv, dish_desc_tv;
         int speed;
         Timer timer;
         System.Random rand;
@@ -37,6 +37,7 @@ namespace GROUP7_IT123P_MP
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
+
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
@@ -54,18 +55,21 @@ namespace GROUP7_IT123P_MP
             iv.LayoutParameters.Height = 600;
             iv.LayoutParameters.Width = 600;
 
-            tv = FindViewById<TextView>(Resource.Id.textView1);
-            tv.Text = dish_descs[0];
+            dish_title_tv = FindViewById<TextView>(Resource.Id.title_tv);
+            dish_title_tv.Text = dish_imgs[0];
+
+            dish_desc_tv = FindViewById<TextView>(Resource.Id.desc_tv);
+            dish_desc_tv.Text = dish_descs[0];
 
             //Calls Randomizer.cs Class
-            randclass = new Randomizer(iv, tv, dish_descs, dish_imgs);
+            randclass = new Randomizer(iv, dish_title_tv, dish_desc_tv, dish_descs, dish_imgs);
             randclass.Play();
         }
 
         // Triggers goToNextPage function upon selection of nav item
         public bool OnNavigationItemSelected(IMenuItem item)
         {
-            food_category = item.TitleFormatted.ToString(); // stores title of category
+            food_category = item.TitleFormatted.ToString(); // stores title of category in string var
             goToNextPage(food_category);
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -83,7 +87,7 @@ namespace GROUP7_IT123P_MP
 
         
 
-        // built-in template functions
+        // built-in template functions (ignore)
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);

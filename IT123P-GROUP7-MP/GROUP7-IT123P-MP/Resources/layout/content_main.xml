@@ -10,16 +10,21 @@
     android:id="@+id/linearlayout"
     android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btntest"
+    <TextView
+        android:text="Pinoy Feast"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="next activity" />
+        android:textSize="40dp"
+        android:gravity="center"
+        android:id="@+id/titleText" />
+
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
         android:layout_width="match_parent"
         android:layout_height="334.5dp"
         android:id="@+id/imageView1" />
+
     <TextView
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -27,5 +32,14 @@
         android:layout_height="39.0dp"
         android:textSize="26dp"
         android:gravity="center"
-        android:id="@+id/textView1" />
+        android:id="@+id/title_tv" />
+
+    <TextView
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc_tv" 
+        android:gravity="center_horizontal"/>
+
 </LinearLayout>

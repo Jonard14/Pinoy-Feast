@@ -50,7 +50,7 @@
                 <ToggleButton
                     android:layout_width="107.5dp"
                     android:layout_height="37.0dp"
-                    android:id="@+id/toggleButton1" />
+                    android:id="@+id/toggleVisibilityBttn" />
             </LinearLayout>
           
             <LinearLayout
@@ -61,6 +61,16 @@
                 android:layout_height="match_parent"
                 android:id="@+id/foodContainer" 
                 android:gravity="center"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/hiddenFoodContainer" 
+                android:gravity="center"
+                android:visibility="gone"/>
 
         </LinearLayout>
         

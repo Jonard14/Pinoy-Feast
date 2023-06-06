@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\School Files\\MMCL\\Programming Files\\Xamarin\\IT123P-MP-Grp\\V3\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
+    "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
   },
   "projects": {
-    "D:\\School Files\\MMCL\\Programming Files\\Xamarin\\IT123P-MP-Grp\\V3\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
+    "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School Files\\MMCL\\Programming Files\\Xamarin\\IT123P-MP-Grp\\V3\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "projectUniqueName": "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
         "projectName": "GROUP7-IT123P-MP",
-        "projectPath": "D:\\School Files\\MMCL\\Programming Files\\Xamarin\\IT123P-MP-Grp\\V3\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
-        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "D:\\School Files\\MMCL\\Programming Files\\Xamarin\\IT123P-MP-Grp\\V3\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
+        "projectPath": "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "packagesPath": "C:\\Users\\frien\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frien\\source\\repos\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

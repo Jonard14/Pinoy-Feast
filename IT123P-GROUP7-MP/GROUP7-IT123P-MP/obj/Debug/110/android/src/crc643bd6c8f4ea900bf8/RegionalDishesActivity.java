@@ -20,9 +20,8 @@ public class RegionalDishesActivity
 	public RegionalDishesActivity ()
 	{
 		super ();
-		if (getClass () == RegionalDishesActivity.class) {
+		if (getClass () == RegionalDishesActivity.class)
 			mono.android.TypeManager.Activate ("GROUP7_IT123P_MP.RegionalDishesActivity, GROUP7-IT123P-MP", "", this, new java.lang.Object[] {  });
-		}
 	}
 
 
