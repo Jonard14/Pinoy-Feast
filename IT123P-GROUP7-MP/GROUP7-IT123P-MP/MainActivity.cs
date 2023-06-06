@@ -18,6 +18,14 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text.Json;
 
+/* IT123P-B54 - MP (Final Exam)
+Group 7:
+    Jonard Cyrus Francisco
+    Zoe Aleczandra Pineda
+    Leonard Reshley Tiangsing
+    Gerico Tolayba
+*/
+
 namespace GROUP7_IT123P_MP
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
