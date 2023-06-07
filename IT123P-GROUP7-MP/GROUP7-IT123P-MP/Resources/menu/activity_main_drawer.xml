@@ -33,22 +33,12 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Region VI" />
 		<item
+            android:id="@+id/region_vi_btn"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Region VII" />
+		<item
             android:id="@+id/ncr_btn"
             android:icon="@drawable/ic_menu_gallery"
             android:title="NCR" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
-
 </menu>

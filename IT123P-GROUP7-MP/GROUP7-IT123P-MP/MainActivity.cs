@@ -37,11 +37,7 @@ namespace GROUP7_IT123P_MP
         Timer timer;
         System.Random rand;
         string food_category;
-        
-        /*
-        string[] dish_descs = { "Toyo + Suka slay", "asim", "best served w/ puto tbh" };
-        string[] dish_imgs = { "ADOBO", "SINIGANG", "DINUGUAN" };//ganito muna for testing pero db talaga kukunin
-        */
+
         Randomizer randclass; //Random Class
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -62,7 +58,7 @@ namespace GROUP7_IT123P_MP
             navigationView.SetNavigationItemSelectedListener(this);
 
             iv = FindViewById<ImageView>(Resource.Id.imageView1);
-            iv.SetImageResource(Resource.Drawable.ADOBO);
+            //iv.SetImageResource(Resource.Drawable.ADOBO);
 
             iv.LayoutParameters.Height = 600;
             iv.LayoutParameters.Width = 600;
@@ -83,6 +79,14 @@ namespace GROUP7_IT123P_MP
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
+        }
+
+        // Passes the food category into the Food Activity 
+        public void goToNextPage(string food_category)
+        {
+            Intent intent = new Intent(this, typeof(RegionalDishesActivity));
+            intent.PutExtra("Category", food_category);
+            StartActivity(intent);
         }
 
         //Displays Content
@@ -124,13 +128,7 @@ namespace GROUP7_IT123P_MP
             randclass.Play();
         }
 
-        // Passes the food category into the Food Activity 
-        public void goToNextPage(string food_category)
-        {
-            Intent intent = new Intent(this, typeof(RegionalDishesActivity));
-            intent.PutExtra("Category", food_category);
-            StartActivity(intent);
-        }
+        
 
         
 

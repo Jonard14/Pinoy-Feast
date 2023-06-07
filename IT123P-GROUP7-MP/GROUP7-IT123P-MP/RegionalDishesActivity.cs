@@ -27,6 +27,9 @@ namespace GROUP7_IT123P_MP
         private string food_category;
         private ToggleButton toggleVisibilityButton;
         private LinearLayout foodContainer, hiddenFoodContainer;
+        private TextView categoryLabel;
+        private Button homeButton;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,60 +41,21 @@ namespace GROUP7_IT123P_MP
             hiddenFoodContainer = FindViewById<LinearLayout>(Resource.Id.hiddenFoodContainer);
             toggleVisibilityButton = FindViewById<ToggleButton>(Resource.Id.toggleVisibilityBttn);
             toggleVisibilityButton.CheckedChange += toggleVisibilityButtonCheckedChange;
-
+            categoryLabel = FindViewById<TextView>(Resource.Id.region_label);
             Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+            homeButton = FindViewById<Button>(Resource.Id.home_button);
+            homeButton.Click += homeButtonClick;
 
-            /*
-            string[] dish_names = { "Adobo", "Sinigang", "Dinuguan" };
-            string[] dish_descs = { "Toyo + Vinegar wieieie", "asim", "best served w/ puto tbh" };
-            string[] dish_imgs = { "ADOBO", "SINIGANG", "DINUGUAN" }; // pwede rin gamitin yung dish names.ToUpper instead of making another array for image names
-            */
             food_category = Intent.GetStringExtra("Category");
             Toast.MakeText(this, food_category, ToastLength.Short).Show();
-
-            /* DATABASE FUNCTIONS HERE 
-             * Get dishes based off of the given category !!
-             * yung values sa food_categories ay yung pinapass-in ng goToNextPage na function sa MainActivity
-             */
-
-            string[] food_categories = { "Pinoy Classics", "Region I", "Region II", "Region III", "Region IV-A", "Region V", "Region VI", "NCR" };
-
+            categoryLabel.Text = food_category + " Specialties";
             DisplayContent(builder);
+        }
 
-            /* (Code before connecting to Database)
-            for (int i = 0; i < dish_names.Length; i++)
-            {
-                ImageButton dish_image_button = new ImageButton(this);
-                ImageButton hide_dish_button = new ImageButton(this);
-                TextView dish_label = new TextView(this);
-
-                // container for each image button + hide button
-                RelativeLayout dish_img_bttn_container = new RelativeLayout(this);
-
-                RelativeLayout.LayoutParams container_params = new RelativeLayout.LayoutParams(
-                    RelativeLayout.LayoutParams.MatchParent,
-                    RelativeLayout.LayoutParams.MatchParent);
-                container_params.TopMargin = 50 * (i+1); // Adjusts the top margin 
-
-
-                dish_img_bttn_container.LayoutParameters = container_params;
-
-                dish_name = dish_names[i];
-                dish_desc = dish_descs[i];
-                dish_img = dish_imgs[i];
-
-                Dish dish = new Dish(dish_name, dish_desc, dish_img, dish_img_bttn_container, foodContainer, hiddenFoodContainer, dish_image_button, hide_dish_button, dish_label, builder);
-                dish.LoadWidgets();
-
-                // Add image buttons and dish label to the containers
-                dish_img_bttn_container.AddView(dish_image_button);
-                dish_img_bttn_container.AddView(hide_dish_button);
-                dish_img_bttn_container.AddView(dish_label);
-
-                foodContainer.AddView(dish_img_bttn_container);
-                dish.UpdateContainers(dish_img_bttn_container, foodContainer);
-            }
-            */
+        public void homeButtonClick(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(MainActivity));
+            StartActivity(intent);
         }
 
         //Display Content
@@ -108,6 +72,7 @@ namespace GROUP7_IT123P_MP
             List<string> title = new List<string>();
             List<string> imageFiles = new List<string>(); //empty lists for desc and imgfile
             List<string> desc = new List<string>();
+            List<string> reg = new List<string>();
 
             for (int i = 0; i < root.GetArrayLength(); i++) //loops through the database and assign it in a variable
             {
@@ -117,47 +82,55 @@ namespace GROUP7_IT123P_MP
                 string searchedimgfile = u1.GetProperty("imgfile").ToString();
                 string searcheddesc = u1.GetProperty("description").ToString();
                 string searchedstatus = u1.GetProperty("status").ToString();
+                string searchedregion = u1.GetProperty("region").ToString();
 
                 title.Add(searchedname);
                 imageFiles.Add(searchedimgfile); //added imgfile and desc in the lists
                 desc.Add(searcheddesc);
+                reg.Add(searchedregion);
             }
             string[] titleArray = title.ToArray();
             string[] imgArray = imageFiles.ToArray(); //converted the lists to an array and then assign it in the parameters for randclass
             string[] descArray = desc.ToArray();
+            string[] regArray = reg.ToArray();
+
+            food_category = Intent.GetStringExtra("Category");
 
             //Display content
             for (int i = 0; i < titleArray.Length; i++)
             {
-                ImageButton dish_image_button = new ImageButton(this);
-                ImageButton hide_dish_button = new ImageButton(this);
-                TextView dish_label = new TextView(this);
+                if (regArray[i] == food_category)
+                {
+                    ImageButton dish_image_button = new ImageButton(this);
+                    ImageButton hide_dish_button = new ImageButton(this);
+                    TextView dish_label = new TextView(this);
 
-                // container for each image button + hide button
-                RelativeLayout dish_img_bttn_container = new RelativeLayout(this);
+                    // container for each image button + hide button
+                    RelativeLayout dish_img_bttn_container = new RelativeLayout(this);
 
-                RelativeLayout.LayoutParams container_params = new RelativeLayout.LayoutParams(
-                    RelativeLayout.LayoutParams.MatchParent,
-                    RelativeLayout.LayoutParams.MatchParent);
-                container_params.TopMargin = 50;// * (i + 1); // Adjusts the top margin 
+                    RelativeLayout.LayoutParams container_params = new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.MatchParent,
+                        RelativeLayout.LayoutParams.MatchParent);
+                    container_params.TopMargin = 50;// * (i + 1); // Adjusts the top margin 
 
 
-                dish_img_bttn_container.LayoutParameters = container_params;
+                    dish_img_bttn_container.LayoutParameters = container_params;
 
-                dish_name = titleArray[i];
-                dish_desc = descArray[i];
-                dish_img = imgArray[i];
+                    dish_name = titleArray[i];
+                    dish_desc = descArray[i];
+                    dish_img = imgArray[i];
 
-                Dish dish = new Dish(dish_name, dish_desc, dish_img, dish_img_bttn_container, foodContainer, hiddenFoodContainer, dish_image_button, hide_dish_button, dish_label, builder);
-                dish.LoadWidgets();
+                    Dish dish = new Dish(dish_name, dish_desc, dish_img, dish_img_bttn_container, foodContainer, hiddenFoodContainer, dish_image_button, hide_dish_button, dish_label, builder);
+                    dish.LoadWidgets();
 
-                // Add image buttons and dish label to the containers
-                dish_img_bttn_container.AddView(dish_image_button);
-                dish_img_bttn_container.AddView(hide_dish_button);
-                dish_img_bttn_container.AddView(dish_label);
+                    // Add image buttons and dish label to the containers
+                    dish_img_bttn_container.AddView(dish_image_button);
+                    dish_img_bttn_container.AddView(hide_dish_button);
+                    dish_img_bttn_container.AddView(dish_label);
 
-                foodContainer.AddView(dish_img_bttn_container);
-                dish.UpdateContainers(dish_img_bttn_container, foodContainer);
+                    foodContainer.AddView(dish_img_bttn_container);
+                    dish.UpdateContainers(dish_img_bttn_container, foodContainer);
+                }
             }
         }
 

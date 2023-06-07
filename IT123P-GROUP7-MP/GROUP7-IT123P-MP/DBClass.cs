@@ -20,7 +20,7 @@ namespace GROUP7_IT123P_MP
             Sa request, call this variable IP_DB then lagyan nalang ng plus 
             e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
          */
-        string IP_DB = "http://192.168.100.17/IT123P-MPGrp7-Food/";
+        string IP_DB = "http://192.168.200.210/IT123P-MPGrp7-Food/";
 
         //Http Response
         HttpWebResponse response;
@@ -43,17 +43,6 @@ namespace GROUP7_IT123P_MP
             res = response.ProtocolVersion.ToString();
             return response;
 
-            /*This part cannot return JsonElement because it'll lead to an error which says 
-              "System.Text.Json Cannot access a dispose jsonDocument"
-              i.e that the returned JsonDocument/JsonElement value is disposed wchih contains no value.
-            */
-            /*
-            StreamReader reader = new StreamReader(response.GetResponseStream());
-            var result = reader.ReadToEnd();
-            using JsonDocument doc = JsonDocument.Parse(result);
-            JsonElement root = doc.RootElement;
-            return root;
-            */
         }
     }
 }
