@@ -110,7 +110,6 @@ namespace GROUP7_IT123P_MP
                 string searchedname = u1.GetProperty("name").ToString();
                 string searchedimgfile = u1.GetProperty("imgfile").ToString();
                 string searcheddesc = u1.GetProperty("description").ToString();
-                string searchedstatus = u1.GetProperty("status").ToString();
 
                 title.Add(searchedname);
                 imageFiles.Add(searchedimgfile); //added imgfile and desc in the lists

@@ -20,7 +20,7 @@ namespace GROUP7_IT123P_MP
             Sa request, call this variable IP_DB then lagyan nalang ng plus 
             e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
          */
-        string IP_DB = "http://192.168.200.210/IT123P-MPGrp7-Food/";
+        string IP_DB = "http://192.168.100.17/IT123P-MPGrp7-Food/";
 
         //Http Response
         HttpWebResponse response;

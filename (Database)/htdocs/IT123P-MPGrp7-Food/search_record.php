@@ -3,7 +3,7 @@
 include_once('connects.php');
 
 
-$query = "SELECT * FROM `fooddata`";
+$query = "SELECT fooddesc.name, fooddesc.imgfile, fooddesc.description, foodcategory.region FROM fooddesc INNER JOIN foodcategory ON fooddesc.name = foodcategory.name;";
 $check=mysqli_query($con,$query);
 $row=mysqli_num_rows($check);
 $myArray = array();
@@ -19,5 +19,4 @@ if($check == FALSE) {
 	
   	}
   echo json_encode($myArray);
-
 ?>

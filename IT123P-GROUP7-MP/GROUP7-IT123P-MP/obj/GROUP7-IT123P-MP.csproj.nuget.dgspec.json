@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V3\\IT123P-GROUP7-MP (V2)\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V3\\IT123P-GROUP7-MP (V2)\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
+    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V3\\IT123P-GROUP7-MP (V2)\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
         "projectName": "GROUP7-IT123P-MP",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V3\\IT123P-GROUP7-MP (V2)\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V3\\IT123P-GROUP7-MP (V2)\\GROUP7-IT123P-MP\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

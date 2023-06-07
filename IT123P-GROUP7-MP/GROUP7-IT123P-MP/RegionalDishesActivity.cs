@@ -81,7 +81,6 @@ namespace GROUP7_IT123P_MP
                 string searchedname = u1.GetProperty("name").ToString();
                 string searchedimgfile = u1.GetProperty("imgfile").ToString();
                 string searcheddesc = u1.GetProperty("description").ToString();
-                string searchedstatus = u1.GetProperty("status").ToString();
                 string searchedregion = u1.GetProperty("region").ToString();
 
                 title.Add(searchedname);
@@ -93,8 +92,6 @@ namespace GROUP7_IT123P_MP
             string[] imgArray = imageFiles.ToArray(); //converted the lists to an array and then assign it in the parameters for randclass
             string[] descArray = desc.ToArray();
             string[] regArray = reg.ToArray();
-
-            food_category = Intent.GetStringExtra("Category");
 
             //Display content
             for (int i = 0; i < titleArray.Length; i++)
