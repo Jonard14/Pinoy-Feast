@@ -25,16 +25,18 @@ public class MainActivity
 	public MainActivity ()
 	{
 		super ();
-		if (getClass () == MainActivity.class)
+		if (getClass () == MainActivity.class) {
 			mono.android.TypeManager.Activate ("GROUP7_IT123P_MP.MainActivity, GROUP7-IT123P-MP", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 
 	public MainActivity (int p0)
 	{
 		super (p0);
-		if (getClass () == MainActivity.class)
+		if (getClass () == MainActivity.class) {
 			mono.android.TypeManager.Activate ("GROUP7_IT123P_MP.MainActivity, GROUP7-IT123P-MP", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 

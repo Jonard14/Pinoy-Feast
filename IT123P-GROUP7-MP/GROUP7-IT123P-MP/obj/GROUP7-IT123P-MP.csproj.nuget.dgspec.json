@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V14.1 LeonardRecipe\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
+    "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V14.1 LeonardRecipe\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V14.1 LeonardRecipe\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
         "projectName": "GROUP7-IT123P-MP",
-        "projectPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
-        "packagesPath": "C:\\Users\\norys\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\IT123P-GROUP7-MP\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V14.1 LeonardRecipe\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\GROUP7-IT123P-MP.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\IT123P-MP\\V14.1 LeonardRecipe\\IT123P-GROUP7-MP\\GROUP7-IT123P-MP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\norys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid11.0"

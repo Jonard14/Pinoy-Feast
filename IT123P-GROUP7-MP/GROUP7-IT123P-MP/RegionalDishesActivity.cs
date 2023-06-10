@@ -72,6 +72,9 @@ namespace GROUP7_IT123P_MP
             List<string> title = new List<string>();
             List<string> imageFiles = new List<string>(); //empty lists for desc and imgfile
             List<string> desc = new List<string>();
+            List<string> ingredients = new List<string>();
+            List<string> steps = new List<string>();
+
             List<string> reg = new List<string>();
 
             for (int i = 0; i < root.GetArrayLength(); i++) //loops through the database and assign it in a variable
@@ -81,16 +84,25 @@ namespace GROUP7_IT123P_MP
                 string searchedname = u1.GetProperty("name").ToString();
                 string searchedimgfile = u1.GetProperty("imgfile").ToString();
                 string searcheddesc = u1.GetProperty("description").ToString();
+                string searchedingredients = u1.GetProperty("ingredients").ToString();
+                string searchedsteps = u1.GetProperty("steps").ToString();
+
                 string searchedregion = u1.GetProperty("region").ToString();
 
                 title.Add(searchedname);
                 imageFiles.Add(searchedimgfile); //added imgfile and desc in the lists
                 desc.Add(searcheddesc);
+                ingredients.Add(searchedingredients);
+                steps.Add(searchedsteps);
+
                 reg.Add(searchedregion);
             }
             string[] titleArray = title.ToArray();
             string[] imgArray = imageFiles.ToArray(); //converted the lists to an array and then assign it in the parameters for randclass
             string[] descArray = desc.ToArray();
+            string[] ingredientsArray = ingredients.ToArray();
+            string[] stepsArray = steps.ToArray();
+
             string[] regArray = reg.ToArray();
 
             //Display content
@@ -114,7 +126,7 @@ namespace GROUP7_IT123P_MP
                     dish_img_bttn_container.LayoutParameters = container_params;
 
                     dish_name = titleArray[i];
-                    dish_desc = descArray[i];
+                    dish_desc = descArray[i] + "\n\n" + ingredientsArray[i] + "\n" + stepsArray[i];
                     dish_img = imgArray[i];
 
                     Dish dish = new Dish(dish_name, dish_desc, dish_img, dish_img_bttn_container, foodContainer, hiddenFoodContainer, dish_image_button, hide_dish_button, dish_label, builder);

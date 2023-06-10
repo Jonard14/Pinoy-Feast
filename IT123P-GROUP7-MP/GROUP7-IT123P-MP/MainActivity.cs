@@ -102,6 +102,8 @@ namespace GROUP7_IT123P_MP
             List<string> title = new List<string>();
             List<string> imageFiles = new List<string>(); //empty lists for desc and imgfile
             List<string> desc = new List<string>();
+            List<string> ingredients = new List<string>();
+            List<string> steps = new List<string>();
 
             for (int i = 0; i < root.GetArrayLength(); i++) //loops through the database and assign it in a variable
             {
@@ -110,17 +112,23 @@ namespace GROUP7_IT123P_MP
                 string searchedname = u1.GetProperty("name").ToString();
                 string searchedimgfile = u1.GetProperty("imgfile").ToString();
                 string searcheddesc = u1.GetProperty("description").ToString();
+                string searchedingredients = u1.GetProperty("ingredients").ToString();
+                string searchedsteps = u1.GetProperty("steps").ToString();
 
                 title.Add(searchedname);
                 imageFiles.Add(searchedimgfile); //added imgfile and desc in the lists
                 desc.Add(searcheddesc);
+                ingredients.Add(searchedingredients);
+                steps.Add(searchedsteps);
             }
             string[] titleArray = title.ToArray();
             string[] imgArray = imageFiles.ToArray(); //converted the lists to an array and then assign it in the parameters for randclass
             string[] descArray = desc.ToArray();
+            string[] ingredientsArray = ingredients.ToArray();
+            string[] stepsArray = steps.ToArray();
 
             //Calls Randomizer class
-            randclass = new Randomizer(iv, dish_title_tv, dish_desc_tv, titleArray, descArray, imgArray);
+            randclass = new Randomizer(iv, dish_title_tv, dish_desc_tv, titleArray, descArray, imgArray, ingredientsArray, stepsArray);
             //Randomize content when the user opens the app
             randclass.startup();
             //Runs the content randomly every 10 seconds

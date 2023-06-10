@@ -18,13 +18,13 @@ namespace GROUP7_IT123P_MP
     {
         ImageView iv;
         TextView title_tv, desc_tv;
-        string[] dish_titles, dish_descs, dish_imgs;
+        string[] dish_titles, dish_descs, dish_imgs, dish_ingredients, dish_steps;
 
         int speed;
         Timer timer;
         Random rand;
 
-        public Randomizer(ImageView iv, TextView dish_title_tv, TextView dish_desc_tv, string[] dish_titles, string[] dish_descs, string[] dish_imgs)
+        public Randomizer(ImageView iv, TextView dish_title_tv, TextView dish_desc_tv, string[] dish_titles, string[] dish_descs, string[] dish_imgs, string[] dish_ingredients, string[] dish_steps)
         {
             this.iv = iv;
             this.title_tv = dish_title_tv;
@@ -32,6 +32,8 @@ namespace GROUP7_IT123P_MP
             this.dish_titles = dish_titles;
             this.dish_descs = dish_descs;
             this.dish_imgs = dish_imgs;
+            this.dish_ingredients = dish_ingredients;
+            this.dish_steps = dish_steps;
         }
 
         public void SetIntervalMode(string n)
@@ -59,7 +61,7 @@ namespace GROUP7_IT123P_MP
             iv.LayoutParameters.Width = 1200;
 
             title_tv.Text = dish_titles[cnt];
-            desc_tv.Text = dish_descs[cnt];
+            desc_tv.Text = dish_descs[cnt] + "\n\n" + dish_ingredients[cnt] + "\n" + dish_steps[cnt];
 
             throw new NotImplementedException();
         }
@@ -76,7 +78,7 @@ namespace GROUP7_IT123P_MP
             iv.LayoutParameters.Width = 1200;
 
             title_tv.Text = dish_titles[cnt];
-            desc_tv.Text = dish_descs[cnt];
+            desc_tv.Text = dish_descs[cnt] + "\n\n" + dish_ingredients[cnt] + "\n" + dish_steps[cnt];
         }
     }
 }
