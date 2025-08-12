@@ -1,3 +1,11 @@
+For DBClass.cs file:
+For request, call this variable IP_DB then change IP_DB to your IP address of your current network via cmd (ipconfig command)
+e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
+
+=================================
+Use XAMPP for local DB
+-Run Apache & MySQL
+
 Database name: foodinfo
 
 To create table, I have provided the SQL files in this folder.
