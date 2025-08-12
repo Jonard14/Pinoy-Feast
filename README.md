@@ -34,7 +34,7 @@
 
 **Course:** Computer Science
 
-**Subject:** IT123P – B54  
+**Subject:** IT123P - INTEGRATIVE PROGRAMMING AND TECHNOLOGIES
 
 **School:** Mapúa Malayan Colleges Laguna
 
