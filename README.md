@@ -43,10 +43,10 @@
 **Group:** 7  
 
 **Members:**  
-- Francisco, Jonard Cyrus S.  
-- Pineda, Zoe Aleczandra A.  
-- Tiangsing, Leonard Reshley M.  
-- Tolayba, Gerico Z.  
+- [Francisco, Jonard Cyrus](https://github.com/Jonard14)
+- [Pineda, Zoe Aleczandra](https://github.com/zowowo)
+- [Tiangsing, Leonard Reshley](https://github.com/lrtiangsing1)
+- [Tolayba, Gerico](https://github.com/buffeddude69)
 
 ## Description
 **Pinoy Feast** is a mobile application that showcases Filipino dishes and their rich cultural history from different provinces. Key features include:  
