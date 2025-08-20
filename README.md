@@ -60,6 +60,13 @@
 - **User-Friendly Interface:** Simple navigation with options to manually explore or get random suggestions.  
 - **Content Visibility:** Enable/disable dish visibility dynamically.  
 
+## Tools Used
+- **Mobile Framework:** Xamarin
+- **Programming Language:** C# (.NET)
+- **Database:** MySQL
+- **Server:** XAMPP
+- **Development Tool:** Visual Studio
+
 ## Sample Dishes (From Project)
 ### Batil Patung
 A popular noodle dish from Tuguegarao, featuring:  
